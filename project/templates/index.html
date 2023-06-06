@@ -11,9 +11,9 @@
         <div class="w3-sidebar w3-bar-block w3-border-right"  id="mySidebar">
           <img id="logo" src="/static/images/logo.png" alt="logo">
           <button id="closeButton" onclick="w3_close()" class= "btn-close btn-close-white" aria-label="Close"></button>
-            <a href="#" class="w3-bar-item w3-button"><center>Link 1</center></a>
-            <a href="#" class="w3-bar-item w3-button"><center>Link 2</center></a>
-            <a href="#" class="w3-bar-item w3-button"><center>Link 3</center></a>
+            <a href="#" class="w3-bar-item w3-button"><center>Attraction</center></a>
+            <a href="#" class="w3-bar-item w3-button"><center>Travel Guidelines</center></a>
+            <a href="#aboutUs" class="w3-bar-item w3-button"><center>About Us</center></a>
         </div>
       </div>
     <div id="overlay" onclick="w3_open()">
@@ -37,7 +37,7 @@
       <div class="card-body">
         <div id="front" class="card">
           <div class="card-body">
-            <p id="p" class="card-title">Book your Dream Vacation With Us!</p>
+            <p id="p" class="card-title">Book your Dream Vacation Us!</p>
             <h1 id="h1" class="card-title">HNM Travel and Tours</h1>
           </div>
         </div>
@@ -45,11 +45,50 @@
     </div>
   </div>
   <!-- Background image -->
-
+  <!--Section: Services-->
+  <section id="sectionServices" class="align-center" >
+    <div class="container">
+      <div class="row">
+        <div class="col">
+         <div class="cardServices">
+            <img class="card-img-top" src="/static/icons/travel.svg" alt="Traveller Tours">
+            <div class="card-body">
+              <h4 class="card-title">Traveller Tours</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div  class="cardServices">
+            <img class="card-img-top" src="/static/icons/globe.svg" alt="Traveller Tours">
+            <div class="card-body">
+              <h4 class="card-title">Explore The World</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="cardServices">
+            <img class="card-img-top" src="/static/icons/Hotel.svg" alt="Traveller Tours">
+            <div class="card-body">
+              <h4 class="card-title">Luxurious Hotel</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div  class="cardServices">
+            <img class="card-img-top" src="/static/icons/adventure.svg" alt="Traveller Tours">
+            <div class="card-body">
+              <h4 class="card-title">Exciting Adventure</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Section: Services-->
     <!--gallery-->
       <main class= "mt-5">
         <div class="container">
-          <section id="firstSection" class="u-clearfix u-section-2">
+          <section>
             <div class="row">
               <div class="col-md-6 gx-5 mb-4">
                 <h1 id="title">10 Amazing places in Palawan</h1>
@@ -102,7 +141,7 @@ only here in palawan, fostering a greater appreciation and comprehension of the 
                     <div class="child bg-five">
                       <img 
                       src="/static/images/malcapuya.jpg"
-                      class="w-100 shadow-1-strong rounded mb-4"
+                      id="malcapuya" class="w-100 shadow-1-strong rounded mb-4"
                       alt="Malcapuya"
                      />
                     </div>
@@ -122,11 +161,11 @@ only here in palawan, fostering a greater appreciation and comprehension of the 
                 <div id="right" class="col-lg-4 col-md-12 mb-4 mb-lg-0">
                   <img
                     src="/static/images/coron.jpg"
-                    class="w-100 shadow-1-strong rounded mb-4"
+                    class="w-100"
                     alt="Coron"
                   />
                 </div>
-              <div class ="u-container-layout u-container-layout-3">
+              <div>
               </div>
               </div>
             </div>
