@@ -1,0 +1,238 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<!-- Background image -->
+<div id="intro" class="bg-image shadow-2-strong">
+  <!-- sideBar -->
+  <nav  class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
+    <div class="container-fluid">
+      <div class="btn-btn-dark">
+        <button id="button-menu" class="btn btn-outline-secondary" onclick="w3_open()">&#9776;</button>
+        <div class="w3-sidebar w3-bar-block w3-border-right"  id="mySidebar">
+          <img id="logo" src="/static/images/logo.png" alt="logo">
+          <button id="closeButton" onclick="w3_close()" class= "btn-close btn-close-white" aria-label="Close"></button>
+            <a href="#" class="w3-bar-item w3-button"><center>Link 1</center></a>
+            <a href="#" class="w3-bar-item w3-button"><center>Link 2</center></a>
+            <a href="#" class="w3-bar-item w3-button"><center>Link 3</center></a>
+        </div>
+      </div>
+    <div id="overlay" onclick="w3_open()">
+      <!-- sideBar Script -->
+      <script>
+        function w3_open() {
+          document.getElementById("mySidebar").style.display = "block";
+          document.getElementById("overlay").style.display = "block";
+        }
+        function w3_close() {
+          document.getElementById("mySidebar").style.display = "none";
+          document.getElementById("overlay").style.display = "none";
+        }
+      </script>
+      <!-- sideBar Script-->
+    </div>
+  </nav>
+  <!-- sideBar -->
+  <div class="container d-flex align-items-center justify-content-center text-center h-100">
+    <div id="back" class="card">
+      <div class="card-body">
+        <div id="front" class="card">
+          <div class="card-body">
+            <p id="p" class="card-title">Book your Dream Vacation With Us!</p>
+            <h1 id="h1" class="card-title">HNM Travel and Tours</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Background image -->
+
+    <!--gallery-->
+      <main class= "mt-5">
+        <div class="container">
+          <section id="firstSection" class="u-clearfix u-section-2">
+            <div class="row">
+              <div class="col-md-6 gx-5 mb-4">
+                <h1 id="title">10 Amazing places in Palawan</h1>
+                <p id="disc1" class="u-text u-text-2">
+                  Palawan stands out as one of the most captivating destination in the philippines due to its remarkable natural beauty
+which includes breathtaking landscapes, picturesque views, and mesmerizing natural attractions. 
+At HNM travel and Tours Agency, Our objective is to present the extraordinary marvels and distinctive 
+characteristics that set palawan from other places. By doing so, we honor the uniqueness that exist
+only here in palawan, fostering a greater appreciation and comprehension of the abundant wealth of natural and cultural treasures it provides.
+                </p>
+                <button id="learnMore-Button" type="button" class="child u-align-right u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-palette-2-base u-radius-50 u-btn-1">Learn More</button>
+                <div id="gallery" class="row">
+                  <div class="parent col-lg-4 col-md-12 mb-4 mb-lg-0">
+                    <div class="child bg-one">
+                      <img
+                        src="/static/images/big-lagoon.jpg"
+                        class="w-100 shadow-1-strong rounded mb-4"
+                        alt="Elnido"
+                      />
+                    </div>
+                  </div>
+                  <div class="parent col-lg-4 col-md-12 mb-4 mb-lg-0">
+                    <div class="child bg-two">
+                      <img
+                        src="/static/images/elnido-beach.jpg"
+                        class="w-100 shadow-1-strong rounded mb-4"
+                        alt="Elnido Beach"
+                      />
+                    </div>
+                  </div>
+                  <div class="parent col-lg-4 col-md-12 mb-4 mb-lg-0">
+                    <div class="child bg-three">
+                      <img 
+                        src="/static/images/elnido2.jpg"
+                        class="w-100 shadow-1-strong rounded mb-4"
+                        alt="Elnido"
+                      />
+                    </div>
+                  </div>
+                  <div class="parent col-lg-4 col-md-12 mb-4 mb-lg-0">
+                    <div class="child bg-four">
+                      <img
+                      src= "/static/images/1.jpg"
+                      class="w-100 shadow-1-strong rounded mb-4"
+                      alt="Culion Island"
+                    />
+                    </div>
+                  </div>
+                  <div class="parent col-lg-4 col-md-12 mb-4 mb-lg-0">
+                    <div class="child bg-five">
+                      <img 
+                      src="/static/images/malcapuya.jpg"
+                      class="w-100 shadow-1-strong rounded mb-4"
+                      alt="Malcapuya"
+                     />
+                    </div>
+                  </div>
+                  <div class="parent col-lg-4 col-md-12 mb-4 mb-lg-0">
+                    <div class="child bg-six">
+                      <img
+                      src="/static/images/underground.jpg"
+                      class="w-100 shadow-1-strong rounded mb-4"
+                      alt="Underground River"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div  class="col-md-6 gx-5 mb-4">
+                <div id="right" class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                  <img
+                    src="/static/images/coron.jpg"
+                    class="w-100 shadow-1-strong rounded mb-4"
+                    alt="Coron"
+                  />
+                </div>
+              <div class ="u-container-layout u-container-layout-3">
+              </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <!-- Gallery -->
+      <hr class="my-5" />
+  <!--Section: Content-->
+  <section class="text-center">
+    <h4 class="mb-5"><strong>CEDRICK CHU!</strong></h4>
+    <div id="rowCard" class="row">
+      <div class="col-lg-4 col-md-12 mb-4">
+        <div id="card1" class="card">
+          <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+            <img src="/static/images/balabac.jpg" class="img-fluid" />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+            </a>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text
+            </p>
+            <a href="#!" class="btn btn-primary">Button</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div id="card2" class="card">
+          <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+            <img src="/static/images/2.jpg" class="img-fluid" />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+            </a>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text 
+            </p>
+            <a href="#!" class="btn btn-primary">Button</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div id="card3" class="card">
+          <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+            <img src="/static/images/cauayan-island-resort.jpg" class="img-fluid" />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+            </a>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text 
+            </p>
+            <a href="#!" class="btn btn-primary">Button</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Section: Content-->
+  <hr class="my-5" />
+  
+  <!--Section: Content-->
+  <div id="packages" class="container-fluid">
+    <p  class="note">Sale Vacation </p>
+    <p  class="note">Packages</p>
+      <form method="POST" class="u-clearfix u-form-horizontal u-form-spacing-0 u-inner-form" style="padding: 0;" source="email" name="form">
+        <input type="email" placeholder="Enter a valid email address" id="email-22f8" name="email" class="u-input u-input-rectangle u-white" required="">
+        <div class="u-black u-btn u-btn-submit u-button-style u-btn-1">
+          <input type="submit" value="submit" class="u-form-control-hidden">
+        </div>
+      </form>
+  </div>
+  <!--Section: Content-->
+   
+  <hr class="my-5" />
+  <div id="aboutUs" class="bg-image shadow-2-strong">
+    <div class="row">
+      <div class="column">
+        <div id="leftCard" class="card">
+          <p id="p1" class="card-title">About Us</p>
+          <h1 id="services" class="card-title">Our Services</h1>
+          <p id="p2" class="card-title">International and Domestic Flight</p>
+          <p id="p2" class="card-title">Hotel and Resort Reservation</p>
+          <p id="p2" class="card-title">Land Transportation Service</p>
+          <p id="p2" class="card-title">Travel Consultation</p>
+        </div>  
+      </div>
+      <div class="col-md-6 gx-5 mb-4">
+       <div  id="rightCard" class="card">
+        <div class ="u-container-layout u-container-layout-3">
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+
+  
+
+{% endblock %}
