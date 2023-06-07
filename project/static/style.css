@@ -6,7 +6,6 @@ html, body {
     scroll-behavior: smooth;
 }
 
-
 #intro {
     background-image: url("/static/images/background.jpg");
     background-repeat: no-repeat;
@@ -397,6 +396,7 @@ input[type=submit]{
 
 @media screen and (max-width: 600px) 
 {
+
     #intro{
         background-image: url("/static/images/background.jpg");
         width: 100%;
@@ -456,7 +456,35 @@ input[type=submit]{
     margin-top: 1em;
    
    }
+
+.cardServices{
+    margin-top: -4em;
+    background-color: #ffffff !important;
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+}
+
+.cardServices img{
+    margin-right: 2em;
+    height: 50px;
+    margin-top: 20px;
     
+}
+.card-title{
+    text-align: center;
+    color: #000000 !important;
+    font-family: sans-serif;
+    word-wrap: break-word;
+    text-transform: uppercase;
+    font-size: .7rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 50px 0 0;
+    margin-top: 3.5em;
+
+}
+
     #rightCard{
         width: 590px;
         height: 450px;
