@@ -4,8 +4,12 @@ html, body {
     --effective-scale: 1.1;
     background-color: #292b33;
     scroll-behavior: smooth;
+   
+    
 }
-
+#navBar{
+    margin-left: 105em;
+}
 #intro {
     background-image: url("/static/images/background.jpg");
     background-repeat: no-repeat;
@@ -24,7 +28,7 @@ html, body {
         font-size: 30px;
         font-weight: bold;
         margin-left: 60em;
-        margin-top: .4em;
+        margin-top: 1em;
         padding: 6px 14px;
         z-index: 9999;
         color: rgb(2, 2, 2);      
@@ -39,7 +43,7 @@ html, body {
         color: white;
         font-weight: bold;
         margin-left: 9em;
-        z-index: 9999999999;
+        
     }
     #closeButton:hover{
         font-size: x-large;
@@ -207,6 +211,7 @@ section{
 
 #gallery{
     margin-top: 2em;
+   
 }
 
 
@@ -216,6 +221,8 @@ section{
     height: auto;
     margin-left: 2em;
     border-radius: 0%;
+    border: 2px solid white;
+    margin-top: 3.5em;
 
 }
 
@@ -367,6 +374,7 @@ input[type=submit]{
     border-radius: 0%;
     
 }
+
 .fas fa-map-marked{
     background-color: #26363F;
 }
@@ -394,13 +402,15 @@ input[type=submit]{
         
 }
 
-@media screen and (max-width: 600px) 
+@media screen and (max-width: 720px) 
 {
 
     #intro{
         background-image: url("/static/images/background.jpg");
         width: 100%;
         height: 50vh;
+        
+        
     }
     
     #front {
