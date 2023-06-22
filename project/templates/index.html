@@ -6,11 +6,11 @@
 <header>
   <!-- Animated navbar-->
   <nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
-    <div id="topnav" class="container-fluid"> 	    
+    <div id="topnav" class="container-fluid"> 	 
       <ul id="icons" class="navbar-nav me-auto order-0">
         <li class="nav-item">
           <a
-            href="https://www.youtube.com/watch?v=F9E-C7pi0uU" target="_blank">
+            href="https://www.facebook.com/HNMtravel" target="_blank">
             <i class="bi bi-facebook" ></i>
             <svg  xmlns="http://www.w3.org/2000/svg" width="70" height="30" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
             <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
@@ -37,6 +37,21 @@
         </li>
       </ul>
     </div>
+    <script>
+      $(document).ready(function(){
+        $(window).scroll(function(){
+          var scroll = $(window).scrollTop();
+          if (scroll > 300) {
+            $("#topnav").css("background" , "transparent");
+          }
+      
+          else{
+            $("#topnav").css("background" , "rgb(29, 29, 29)");  	
+          }
+        })
+      })
+    </script>
+    
   </nav>
 
   <!--Animated navbar-->
@@ -318,8 +333,4 @@ only here in palawan, fostering a greater appreciation and comprehension of the 
     </div>
     </div>
   </div>
-
-
-  
-
 {% endblock %}
