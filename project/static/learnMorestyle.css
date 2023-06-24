@@ -1,8 +1,11 @@
 
 #page-content{
     padding-top: 8em;
+    margin-top: -2em;
+    margin-bottom: -2em;
 
 }
+
 ul.breadcrumb {
     padding: 10px 16px;
     list-style: none;
@@ -181,7 +184,7 @@ ul.breadcrumb {
     max-width: 2000px;
     margin-inline: auto;
     padding-inline: 40px;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 24fr));
+    grid-template-columns: repeat(auto-fill, minmax(500px, 2fr));
     gap: 5px;
   }
   
