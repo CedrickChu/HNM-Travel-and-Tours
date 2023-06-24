@@ -165,7 +165,7 @@ ul.breadcrumb {
   
 
  
-  /* using the has() relational pseudo selector to update our custom properties */
+ 
   article:has(:hover, :focus) {
     --img-scale: 1.1;
     --title-color: #28666e;

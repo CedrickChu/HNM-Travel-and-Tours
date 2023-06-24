@@ -277,11 +277,12 @@ section{
         color: #000000;
         margin-top: .5em;
         font-weight: bolder!important;
-        font-size: 40px;
-        margin-right: 1.5em;
+        font-size: 40px !important;
+        margin-left: 1.3em;
+       
        
 }
-#p2{
+#leftCard .card-title{
     text-align: center;
     font-family: sans-serif;
     text-transform: uppercase;
@@ -292,6 +293,7 @@ section{
     margin-right: 2em;
     margin-top: .3em;
 }
+
 
 .wrapper {
     display: grid;
@@ -398,14 +400,9 @@ input[type=submit]{
     background-position: center center;
     
 }
-#last{
-        width: 100px;
-        margin: 15px;
-        margin-left: 30em;
-        margin-top: -20em;
-        z-index: 2;
-        
-}
+
+
+
 
 @media screen and (max-width: 720px) 
 {
