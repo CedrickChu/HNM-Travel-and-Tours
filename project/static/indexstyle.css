@@ -400,7 +400,9 @@ input[type=submit]{
     background-position: center center;
     
 }
-
+#sectionImages{
+    background-color: #e4e5e6;
+}
 
 
 
