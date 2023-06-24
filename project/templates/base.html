@@ -17,7 +17,12 @@
 
     </head>
     <body>
+
+        {% include 'header.html' %}
+
         {% block body %}{% endblock %}
+
+        {% include 'footer.html' %}
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
           AOS.init();
