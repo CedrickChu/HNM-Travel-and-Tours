@@ -403,11 +403,31 @@ input[type=submit]{
 #sectionImages{
     background-color: #e4e5e6;
 }
+.fb-post {
+    margin-bottom: 20px;
+    border: 1px solid #e9e9e9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 654px;
+    background-color: floralwhite
+}
+.embeddedPostsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 654px;
+}
 
 
 
-@media screen and (max-width: 720px) 
-{
+@media screen and (max-width: 720px) {
+    #icons{
+        max-width: 50%;
+    }
 
     #intro{
         background-image: url("/static/images/background.jpg");
@@ -534,7 +554,6 @@ input[type=submit]{
         padding: 4px;
         margin-left: 7em;
     }
-    
 
 }
 

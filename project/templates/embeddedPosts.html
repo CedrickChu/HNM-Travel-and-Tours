@@ -1,0 +1,27 @@
+
+<div id="fb-post"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0" nonce="{{ nonce }}"></script>
+
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId: '126258490493468',
+      autoLogAppEvents: true,
+      xfbml: true,
+      version: 'v17.0'
+    });
+
+    var latestPostUrl = "{{ latest_post_url }}";
+    if (latestPostUrl) {
+      var embeddedPostCode = '<div class="fb-post" data-href="' + latestPostUrl + '"></div>';
+
+      document.getElementById('embeddedPosts').innerHTML = embeddedPostCode;
+     
+      FB.XFBML.parse(document.getElementById('embeddedPosts'));
+    }
+
+  };
+</script>
+
+<div id="postStatus"></div>
