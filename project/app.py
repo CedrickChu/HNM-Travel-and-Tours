@@ -3,7 +3,6 @@ from cryptography.fernet import Fernet
 import os
 import secrets
 import requests
-import time
 
 app = Flask(__name__)
 app.config.from_object('config.Config')
