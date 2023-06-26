@@ -12,6 +12,7 @@ def inject_nonce():
 @app.route("/")
 def home():
     access_token = os.environ['FACEBOOK_ACCESS_TOKEN']
+    print(f"Access token: {access_token}")
     latest_post_url = fetch_facebook_posts(access_token)
     return render_template('index.html', latest_post_url=latest_post_url, nonce=inject_nonce())
 
