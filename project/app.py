@@ -1,6 +1,5 @@
 from flask import Flask, render_template, current_app
-from cryptography.fernet import Fernet
-from os
+import os
 import secrets
 import requests
 
@@ -11,6 +10,8 @@ def inject_nonce():
 
 @app.route("/")
 def home():
+    with open('/etc/secrets/FACEBOOK_ACCESS_TOKEN') as file:
+        encrypted_token = file.read().strip()
     access_token = os.environ['FACEBOOK_ACCESS_TOKEN']
     latest_post_url = fetch_facebook_posts(access_token)
     return render_template('index.html', latest_post_url=latest_post_url, nonce=inject_nonce())
