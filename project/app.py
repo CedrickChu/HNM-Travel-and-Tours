@@ -2,9 +2,10 @@ from flask import Flask, render_template, current_app
 import os
 import secrets
 import requests
-
+import logging
 app = Flask(__name__)
 
+logging.basicConfig(level=logging.DEBUG)
 def inject_nonce():
     return {'nonce': secrets.token_hex(16)}
 
