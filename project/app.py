@@ -1,11 +1,11 @@
 from flask import Flask, render_template, current_app
 from cryptography.fernet import Fernet
 from config import Config
-import os
 import secrets
 import requests
 
 app = Flask(__name__)
+
 app.config.from_object('config.Config')
 
 def decrypt_token(encrypted_token, encryption_key):
