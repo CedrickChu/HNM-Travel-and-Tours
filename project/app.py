@@ -1,5 +1,6 @@
 from flask import Flask, render_template, current_app
 from cryptography.fernet import Fernet
+from config import Config
 import os
 import secrets
 import requests
