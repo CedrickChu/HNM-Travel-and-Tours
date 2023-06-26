@@ -1,2 +1,13 @@
+from cryptography.fernet import Fernet
+
+# Generate a key for encryption
+key = Fernet.generate_key()
+cipher_suite = Fernet(key)
+
+# Encrypt the access token
+access_token = "EAABy1Nh5yhwBAIpdmlAtbHK7V0mU1gKShjG7XaTcTWoXYNUjpATKek2cbtdQQrreBFSbOPCEGiLfsznQlW4CIsSvaic2HfxXw8SzCRmZC2gCa6vUEZAX8gdQv4Ks38SNow5oN3gpLrKcIHDs38o6oi1tmZBYfREcqpuaW11isczvwfTTZA8c9tGm4o12ivUZB9bCOc2faebdzrwFjNBStFDrcn1vf814ZD"
+encrypted_token = cipher_suite.encrypt(access_token.encode())
+
 class Config:
-    FACEBOOK_ACCESS_TOKEN = 'EAABy1Nh5yhwBAEZASpfZAeC3Hqxy2nAA4ui4KQAgCcYvty1Pinj3zCnKkZBqrH67AqZA4gOWhC8dYSJvEw9SXRVa0g02q39PeTE1EnUv12EZCkpi5VnioKCHHXCYqufYphm07OYDYp01eTbg0s3g5m5mF1o24XBGXdIWf4eIFhAZADHTruyZC4w'
+    FACEBOOK_ACCESS_TOKEN = encrypted_token.decode()
+    SECRET_KEY = key.decode()
