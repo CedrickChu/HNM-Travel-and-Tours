@@ -1,8 +1,35 @@
 {% extends 'base.html' %}
-{% block body %}
 
-<div>
-    <h1>HELLO WORLD</h1>
-</div>
+{% block body %}
+<section id="page-content">
+    <div class="container">
+      <div class="page-title">
+        <h1>10 Amazing Places in Palawan</h1>
+        <nav aria-label="breadcrumb">
+          <ul class="breadcrumb">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="#">Pictures</a></li>
+            <li><a href="#">Summer 15</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+</section>
+
+<section>
+    <div id="photos">
+        <img src="/static/images/1.jpg" alt="A photo" />
+        <img src="/static/images/2.jpg" alt="A photo" />
+        <img src="/static/images/balabac.jpg" alt="A photo" />
+        <img src="/static/images/Elnido2.jpg" alt="A photo" />
+        
+        <img src="/static/images/cayanganLake.avif" alt="A photo" />
+        <img src="/static/images/coron.jpg" alt="A photo" />
+        <img src="/static/images/elnido-beach.jpg" alt="A photo" />
+        <img src="/static/images/elnido.jpg" alt="A photo" />
+        <img src="/static/images/big-lagoon.jpg" alt="A photo" />
+        <img src="/static/images/malcapuya.jpg" alt="A photo" />
+    </div>
+</section>
 
 {% endblock%}
