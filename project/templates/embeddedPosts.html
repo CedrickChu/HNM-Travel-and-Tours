@@ -1,7 +1,5 @@
-
-<div id="fb-post"></div>
+<div id="fb-posts"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0" nonce="{{ nonce }}"></script>
-
 
 <script>
   window.fbAsyncInit = function() {
@@ -12,15 +10,18 @@
       version: 'v17.0'
     });
 
-    var latestPostUrl = "{{ latest_post_url }}";
-    if (latestPostUrl) {
-      var embeddedPostCode = '<div class="fb-post" data-href="' + latestPostUrl + '"></div>';
+    var latestPostUrls = {{ latest_post_urls | tojson }};
+    var embeddedPostCode = '';
 
-      document.getElementById('embeddedPosts').innerHTML = embeddedPostCode;
-     
-      FB.XFBML.parse(document.getElementById('embeddedPosts'));
+    if (latestPostUrls.length > 0) {
+      for (var i = 0; i < latestPostUrls.length; i++) {
+        var postUrl = latestPostUrls[i];
+        embeddedPostCode += '<div class="fb-post" data-href="' + postUrl + '"></div>';
+      }
+
+      document.getElementById('fb-posts').innerHTML = embeddedPostCode;
+      FB.XFBML.parse(document.getElementById('fb-posts'));
     }
-
   };
 </script>
 
