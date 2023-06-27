@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col">
                 <div class="cardServices">
-                    <img class="card-img-top" src="/static/icons/travel.svg" alt="Traveller Tours">
+                    <img class="card-img-top hide-on-small-device" src="/static/icons/travel.svg" alt="Traveller Tours">
                     <div class="card-body">
                         <h4 class="card-title">Traveller Tours</h4>
                     </div>
@@ -17,7 +17,7 @@
             </div>
             <div class="col">
                 <div class="cardServices">
-                    <img class="card-img-top" src="/static/icons/globe.svg" alt="Traveller Tours">
+                    <img class="card-img-top hide-on-small-device" src="/static/icons/globe.svg" alt="Traveller Tours">
                     <div class="card-body">
                         <h4 class="card-title">Explore The World</h4>
                     </div>
@@ -25,7 +25,7 @@
             </div>
             <div class="col">
                 <div class="cardServices">
-                    <img class="card-img-top" src="/static/icons/Hotel.svg" alt="Traveller Tours">
+                    <img class="card-img-top hide-on-small-device" src="/static/icons/Hotel.svg" alt="Traveller Tours">
                     <div class="card-body">
                         <h4 class="card-title">Luxurious Hotel</h4>
                     </div>
@@ -33,7 +33,7 @@
             </div>
             <div class="col">
                 <div class="cardServices">
-                    <img class="card-img-top" src="/static/icons/adventure.svg" alt="Traveller Tours">
+                    <img class="card-img-top hide-on-small-device" src="/static/icons/adventure.svg" alt="Traveller Tours">
                     <div class="card-body">
                         <h4 class="card-title">Exciting Adventure</h4>
                     </div>
@@ -57,7 +57,9 @@
                         characteristics that set palawan from other places. By doing so, we honor the uniqueness that exist
                         only here in palawan, fostering a greater appreciation and comprehension of the abundant wealth of natural and cultural treasures it provides.
                     </p>
-                    <a id="learnMore-Button" href="{{ url_for('learnmore') }}">Learn More</a>
+                    <div id="learnMore-Button">
+                        <a href="{{ url_for('learnmore') }}" >Learn More</a>
+                    </div>
                     <div id="gallery" class="row">
                         <div data-aos="flip-right" class="parent col-lg-4 col-md-12 mb-4 mb-lg-0 scale-down">
                             <div class="child bg-one">
@@ -103,7 +105,7 @@
                         </div>
                     </div>
                 </div>
-                <div data-aos="flip-left" class="col-md-6 gx-5 mb-4 scale-down">
+                <div data-aos="flip-left" class="col-md-6 gx-5 mb-4 scale-down hide-on-small-device">
                     <div id="right" class="col-lg-4 col-md-12 mb-4 mb-lg-0">
                         <img src="/static/images/coron.jpg"
                              class="w-100"

@@ -6,10 +6,18 @@ html, body {
     scroll-behavior: smooth;    
 
 }
+section{
+    background-color: #292b33;
+    color: #e9e9e9;
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+}
 
 #icons{
     margin-top: 50px;
     position: fixed;
+    display: flex;
 }
 
 #topnav{
@@ -21,8 +29,6 @@ html, body {
     margin-top: -1em;
     padding-left: 110rem;
 
-   
-    
 }
 .scrolled{
     background-color: white;
@@ -40,108 +46,108 @@ html, body {
     object-fit: cover;
     display: block;
     box-sizing: border-box;
-
-    }
+}
     
-    #button-menu {
+#button-menu {
 
-        position: fixed;
-        font-size: 30px;
-        font-weight: bold;
-        margin-left: 2.7em;
-        margin-top: .4em;
-        padding: 6px 14px;
-        z-index: 9999999999999999;
-        color: rgb(255, 69, 69);      
-      }
-
-  
-    a:link, a:visited {
-        color: white;
-        font-family: sans-serif;
-        font-size: 20px;
-        z-index: 9999999999;
+    position: fixed;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 2.7em;
+    margin-top: .4em;
+    padding: 6px 14px;
+    z-index: 9999999999999999;
+    color: rgb(255, 69, 69);      
     }
- 
-   #logo{
-        border-radius: 50%;
-        width: 100px;
-        margin: 15px;
-        margin-left: 70px;
-        margin-top: 5em;
-        border: 3px solid #b4b8b9
-   }
+
+
+a:link, a:visited {
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+    z-index: 9999999999;
+}
+
+#logo{
+    border-radius: 50%;
+    width: 100px;
+    margin: 15px;
+    margin-left: 70px;
+    margin-top: 5em;
+    border: 3px solid #b4b8b9
+}
+
+#mySidebar{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 30px 0 0; /* Height of navbar */
+    background-color: rgb(29, 29, 29);
+    width: 240px;
+    z-index: 999999999;
+    overflow: hidden;
     
-    #mySidebar{
-        display: none;
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        padding: 30px 0 0; /* Height of navbar */
-        background-color: rgb(29, 29, 29);
-        width: 240px;
-        z-index: 999999999;
-        overflow: hidden;
+}
+
+    
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+    }
+
+
+#front {
+    width: 590px;
+    height: 366px;
+    margin: 0 auto;
+    background-color: #54f76f !important;
+    z-index: 1;
+    margin-top: 3em;
+    margin-left: -3em;
+}
+
+#back {
+    width: 250px;
+    height: 450px;
+    background-color: #C6393E !important;
+    margin-left: 12em;
+    margin-top: -7em;
+    margin-bottom: -3em;
+}
+
+#p {
+    text-align: left;
+    font-family: 'roboto', sans-serif;
+    text-transform: uppercase;
+    color: #000000;
+    margin-top: 3em;
+    padding-left: 15px;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+#h1{
+    font-size: 45px;
+    text-align: left;
+    font-family: 'roboto', sans-serif;
+    text-transform: uppercase;
+    color: #000000;
+    margin-top: 2em;
+    padding-left: 15px;
+    font-weight: bolder;
         
-    }
- 
-      
-    #overlay {
-        position: fixed;
-        display: none;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0,0,0,0.5);
-        z-index: 2;
-        cursor: pointer;
-      }
-  
-
-    #front {
-        width: 590px;
-        height: 366px;
-        margin: 0 auto;
-        background-color: #54f76f !important;
-        z-index: 1;
-        margin-top: 3em;
-        margin-left: -3em;
-    }
-
-    #back {
-        width: 250px;
-        height: 450px;
-        background-color: #C6393E !important;
-        margin-left: 12em;
-        margin-top: -7em;
-        margin-bottom: -3em;
-
-    #p {
-        text-align: left;
-        font-family: 'roboto', sans-serif;
-        text-transform: uppercase;
-        color: #000000;
-        margin-top: 3em;
-        padding-left: 15px;
-        font-size: 23px;
-        font-weight: bold;
-    }
-
-    #h1{
-        font-size: 45px;
-        text-align: left;
-        font-family: 'roboto', sans-serif;
-        text-transform: uppercase;
-        color: #000000;
-        margin-top: 2em;
-        padding-left: 15px;
-        font-weight: bolder;
-        
-    }
+    
 }
 
 #title{
@@ -162,7 +168,6 @@ html, body {
     text-transform: uppercase;
     text-align: center;
     display: inline-block;
-    margin: 4px 2px;
     padding-top: 15px;
     border-radius: 30px;
     font-family: sans-serif;
@@ -176,14 +181,7 @@ html, body {
     background-color: #39C67A !important;
 }
 
-section{
-    background-color: #292b33;
-    color: #e9e9e9;
-    position: relative;
-    box-sizing: border-box;
-    display: block;
 
-}
 
 .cardServices{
     margin-top: -4em;
@@ -231,10 +229,11 @@ section{
     margin-top: -.6em;
 
 }
+
 #right img{
     width: 100%;
-  height: 100%;
-  object-fit: cover;
+    height: 100%;
+    object-fit: cover;
 }
 
 
@@ -245,6 +244,7 @@ section{
     position: relative;
     
 }
+
 #aboutUs {
     background-image: url("/static/images/untitled.png");
     background-repeat: no-repeat;
@@ -254,34 +254,34 @@ section{
 
  
 #lastCard{
-        width: 390px;
-        height: 430px;
-        background-color: #ffffff;
-        z-index: 1;
-        margin-top: 5em;
-        margin-left: 30em;
-        box-sizing: border-box;
+    width: 390px;
+    height: 430px;
+    background-color: #ffffff;
+    z-index: 1;
+    margin-top: 5em;
+    margin-left: 30em;
+    box-sizing: border-box;
 }
 #p1{
-        text-align: center;
-        font-family: 'roboto', sans-serif;
-        text-transform: uppercase;
-        font-weight: bolder;
-        color: #333e44;
-        margin-top: 1em;
-        font-size: 25px;
-        margin-right: 2em;
+    text-align: center;
+    font-family: 'roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #333e44;
+    margin-top: 1em;
+    font-size: 25px;
+    margin-right: 2em;
     
 }
 #services{
-        text-align: center;
-        font-family: 'roboto', sans-serif;
-        text-transform: uppercase;
-        color: #000000;
-        margin-top: .5em;
-        font-weight: bolder!important;
-        font-size: 40px !important;
-        margin-left: 1.3em;
+    text-align: center;
+    font-family: 'roboto', sans-serif;
+    text-transform: uppercase;
+    color: #000000;
+    margin-top: .5em;
+    font-weight: bolder!important;
+    font-size: 40px !important;
+    margin-left: 1.3em;
        
        
 }
@@ -295,15 +295,6 @@ section{
     font-size: 20px;
     margin-right: 2em;
     margin-top: .3em;
-}
-
-
-.wrapper {
-    display: grid;
-    gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
-    margin-left: 0;
-    margin-right: 0;
 }
 
 
@@ -358,7 +349,8 @@ input[type=email] {
     margin: 20em 40em;
     bottom: 80px;
     position: relative;
-  }
+}
+
 input[type=submit]{
     width: 20%;
     height: 60px;
@@ -428,99 +420,68 @@ input[type=submit]{
 
 
 @media screen and (max-width: 720px) {
-    #icons{
-        max-width: 20%;
-    }
-
     #intro{
         background-image: url("/static/images/background.jpg");
         width: 100%;
         height: 50vh;
-        
-        
     }
     
-    #front {
-        width: 200px;
-        height: 200px;
-        margin: 0 auto;
-        background-color: #26363F;
-        z-index: 1;
-        margin-top: 3em;
-        margin-left: -3em;
+    #topnav #icons{
+        display: flex;
+        justify-content: center;
+    }
+    #button-menu {
+        margin-left: -.5em;
     }
 
-    #back {
-        width: 80px;
-        height: 270px;
-        background-color: #dd604a;
-        left: auto;
-        right: 20%;
-    #p {
-        text-align: left;
-        font-family: 'roboto', sans-serif;
-        text-transform: uppercase;
-        color: #f1f3f1;
-        margin-top: 3em;
-        padding-left: 15px;
-        font-size: 10px;
+
+    #back{
+        display: none;
     }
 
-    #h1{
-        font-size: 20px;
-        text-align: left;
-        font-family: 'roboto', sans-serif;
-        text-transform: uppercase;
-        color: #f1f3f1;
-        margin-top: 2em;
-        padding-left: 15px;
-        
-        }
-    }
+
     #firstSection{
-    
+
         margin: auto;
         margin-top: -4em;
         width: 100%;
         padding: 10px;
     }
-    
-    
-   #gallery{
-    width: 300px;
-    margin: auto;
-    margin-left: 1em;
-    margin-top: 1em;
-   
-   }
 
-.cardServices{
-    margin-top: -4em;
-    background-color: #ffffff !important;
+
+    #gallery{
+        display: block;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 6px;
+        margin-top: 2em;
+
+    }
+
+    .cardServices{
     border: 2px solid black;
-    width: 100px;
-    height: 100px;
-}
+    width: 70px;
+    height: 65px;
+    margin-top: -6em;
+    border-radius: 10px;
 
-.cardServices img{
+   
+    }
+
+    .cardServices img{
     margin-right: 2em;
     height: 50px;
     margin-top: 20px;
-    
-}
-.card-title{
-    text-align: center;
-    color: #000000 !important;
-    font-family: sans-serif;
-    word-wrap: break-word;
-    text-transform: uppercase;
-    font-size: .7rem;
+
+    }
+    .card-title{
+    font-size: .6rem;
     letter-spacing: 1px;
     font-weight: 400;
     margin: 50px 0 0;
-    margin-top: 3.5em;
+    margin-top: 2em;
 
-}
+    }
 
     #rightCard{
         width: 590px;
@@ -533,8 +494,8 @@ input[type=submit]{
         background-repeat: no-repeat;
         background-position: center center;
         margin-left: 1em;
-        
     }
+
     #right{
         width: 100%;
         margin-top: .7em;
@@ -542,28 +503,43 @@ input[type=submit]{
         border-radius: 0%;
         margin-left: 20px;
     }
+
     .bg-five{
         margin-top: 2em;
     }
+
     .row{
         flex: 100%;
         max-width: 100%;
     }
+
     #title{
         font-size: 30px;
     }
+
     #learnMore-Button{
+        width: 160px;
+        height: 60px;
         font-size: 10px;
-        padding: 4px;
-        margin-left: 7em;
+        padding: 2px;
+        padding-top: 15px;
+        text-decoration: none !important;
+        margin-top: 2em;
+        
     }
-    .hide-on-small-device {
+
+    .hide-on-small-device{
         display: none;
-      }
+    }
+
     .scale-down {
         transform: scale(0.6);
     }
-
 }
+
+
+
+
+
 
   
