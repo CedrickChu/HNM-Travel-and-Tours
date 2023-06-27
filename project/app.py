@@ -4,15 +4,17 @@ import secrets
 import requests
 import logging
 from datetime import datetime, timedelta
+
 app = Flask(__name__)
 
 logging.basicConfig(level=logging.DEBUG)
+
 def inject_nonce():
     return {'nonce': secrets.token_hex(16)}
 
 @app.route("/")
 def home():
-    access_token = ['FACEBOOK_ACCESS_TOKEN']
+    access_token = os.environ['FACEBOOK_ACCESS_TOKEN']
     latest_post_urls = fetch_facebook_posts(access_token)
     return render_template('index.html', latest_post_urls=latest_post_urls, nonce=inject_nonce())
 
@@ -56,7 +58,13 @@ def fetch_facebook_posts(access_token, hashtag='#TicketsOnSale', days=30):
 
 @app.route("/more")
 def learnmore():
-    return render_template('learnMore.html')
+  return render_template('learnMore.html')
+
+@app.route("/test")
+def test():
+    return render_template('test.html')
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
+
+

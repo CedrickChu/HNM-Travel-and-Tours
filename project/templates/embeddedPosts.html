@@ -10,10 +10,10 @@
       version: 'v17.0'
     });
 
-    var latestPostUrls = {{ latest_post_urls | tojson }};
+    var latestPostUrls = {{ latest_post_urls | default([]) | tojson }};
     var embeddedPostCode = '';
 
-    if (latestPostUrls.length > 0) {
+    if (Array.isArray(latestPostUrls) && latestPostUrls.length > 0) {
       for (var i = 0; i < latestPostUrls.length; i++) {
         var postUrl = latestPostUrls[i];
         embeddedPostCode += '<div class="fb-post" data-href="' + postUrl + '"></div>';
