@@ -117,7 +117,89 @@
     </div>
 </main>
 <!-- Gallery -->
-<hr class="my-5" />
+
+<!-- Section: Top Travel Attraction-->
+<section>
+    <div id ="sectionBackgroundImg"></div>
+        <div id="Attraction" class="container">
+            <div class="justify-content-md-center">
+                <h3>Travel Attraction</h3>
+                <h1 class="section-title">Top things to do:</h1>
+            </div>
+            <h2 class="mb-0">Underground River Tour</h2>
+            <p class="left-break">
+                Puerto Princesa City is the center of Palawan and best known for the internationally recognized Puerto Princesa Subterranean River (or Underground River), a UNESCO World Heritage Site and one of the New 7 Wonders of Nature. Not only that, the city is critically acclaimed for its environmental excellence.
+            </p>
+            <hr class="hr hr-blurry" />
+
+            <!--carousel Gallery-->
+            <div class="slideshow-container">
+
+                <div class="mySlides">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="/static/images/underground.jpg">
+                  <div class="text">Caption Text</div>
+                </div>
+                
+                <div class="mySlides">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="/static/images/1.jpg" style="width:100%">
+                  <div class="text">Caption Two</div>
+                </div>
+                
+                <div class="mySlides">
+                  <div class="numbertext">3 / 3</div>
+                  <img src="/static/images/2.jpg" style="width:100%">
+                  <div class="text">Caption Three</div>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+            </div>
+              
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+                
+                <script>
+                    let slideIndex = 1;
+                    showSlides(slideIndex);
+
+                    function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                    }
+
+                    function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                    }
+
+                    function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {slideIndex = 1}    
+                    if (n < 1) {slideIndex = slides.length}
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex-1].style.display = "block";  
+                    dots[slideIndex-1].className += " active";
+                    }
+
+                </script>
+            <!--carousel Gallery-->
+        </div>
+    </div>
+</section>
+<!-- Section: Top Travel Attraction-->
+
 <!--Section: Content-->
 <section class="text-center">
     <h4 data-aos="fade-up" class="mb-5"><strong>CEDRICK CHU!</strong></h4>
