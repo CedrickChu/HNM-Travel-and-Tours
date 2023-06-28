@@ -174,7 +174,7 @@ a:link, a:visited {
     letter-spacing: 2px;
     transition: all .5s ease;
     font-size: 15px;
-    text-decoration: none;
+    text-decoration: none !important;
   
 }
 #learnMore-Button:hover{
@@ -196,6 +196,7 @@ a:link, a:visited {
     margin-right: 2em;
     height: 100px;
     margin-top: 20px;
+    max-width: 100%
     
 }
 .card-title{
@@ -212,37 +213,35 @@ a:link, a:visited {
 
 }
 
-
-
 #gallery{
     margin-top: 2em;
+    max-width: 100%
   
 }
 
 
 #right{
     width: 100%;
-    height: 880px;
     margin-left: 2em;
     border-radius: 0%;
     border: 2px solid white;
     margin-top: -.6em;
+    max-width: 100%
 
 }
 
 #right img{
     width: 100%;
-    height: 100%;
     object-fit: cover;
+    max-width: 100%
 }
 
 
 
 
 .bg-five{
-    margin-top: -9.45em;
+    margin-top: -7.3em;
     position: relative;
-    
 }
 
 #aboutUs {
@@ -318,6 +317,7 @@ a:link, a:visited {
     width: auto;
     margin-top: 2em;
     margin-right: 2em;
+    max-width: 100%
 }
 
 
@@ -449,14 +449,6 @@ input[type=submit]{
     }
 
 
-    #gallery{
-        display: block;
-        width: 100%;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 6px;
-        margin-top: 2em;
-
-    }
 
     .cardServices{
     border: 2px solid black;
@@ -472,6 +464,7 @@ input[type=submit]{
     margin-right: 2em;
     height: 50px;
     margin-top: 20px;
+    max-width: 100%
 
     }
     .card-title{
@@ -523,7 +516,6 @@ input[type=submit]{
         font-size: 10px;
         padding: 2px;
         padding-top: 15px;
-        text-decoration: none !important;
         margin-top: 2em;
         
     }
@@ -535,11 +527,9 @@ input[type=submit]{
     .scale-down {
         transform: scale(0.6);
     }
+    #packages{
+        height: 70vh;
+    }
 }
 
 
-
-
-
-
-  
