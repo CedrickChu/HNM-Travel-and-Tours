@@ -6,6 +6,11 @@ html, body {
     scroll-behavior: smooth;    
 
 }
+
+ul{
+    list-style-type: none;
+}
+
 h1{
     display: block;
     margin-block-start: 0.67em;
@@ -27,22 +32,27 @@ section{
     display: block;
 }
 
-#icons{
-    margin-top: 50px;
-    position: fixed;
-    display: flex;
-}
 
 #topnav{
+    height: 90x;
     background:rgb(29, 29, 29);
     position: fixed;
+}
+
+#topnav #icons{
+    right: 0;
     width: 100%;
-    height: 120px;
-    margin: 0;
-    margin-top: -1em;
-    padding-left: 110rem;
+    margin-top: 2.5em;
+    display: flex;
+    justify-content: flex-end;
+    height: 30px;
 
 }
+
+#topnav li {
+    margin: 0 4px;
+  }
+  
 .scrolled{
     background-color: white;
     transition: background-color 0.5s ease;
@@ -59,6 +69,7 @@ section{
     object-fit: cover;
     display: block;
     box-sizing: border-box;
+
 }
     
 #button-menu {
@@ -66,11 +77,10 @@ section{
     position: fixed;
     font-size: 30px;
     font-weight: bold;
-    margin-left: 2.7em;
-    margin-top: .4em;
+    margin-left: 3.1em;
     padding: 6px 14px;
     z-index: 9999999999999999;
-    color: rgb(255, 69, 69);      
+    color: rgb(255, 69, 69);     
     }
 
 
@@ -187,11 +197,14 @@ a:link, a:visited {
     letter-spacing: 2px;
     transition: all .5s ease;
     font-size: 15px;
-    text-decoration: none !important;
   
 }
+
 #learnMore-Button:hover{
     background-color: #39C67A !important;
+}
+#learnMore-Button a{
+    text-decoration: none;
 }
 
 
@@ -552,26 +565,34 @@ input[type=submit]{
  
   /* On smaller screens, decrease text size */
   @media only screen and (max-width: 300px) {
-    .prev, .next,.text {font-size: 11px}
-
- 
-
+    .prev, .next,.text {
+        font-size: 11px
+    }
   }
 
-@media screen and (max-width: 720px) {
+  @media (max-width: 576px) {
+    #topnav {
+      justify-content: space-around;
+    }
+  }
+
+@media screen and (max-width: 768px) {
     #intro{
         background-image: url("/static/images/background.jpg");
         width: 100%;
         height: 50vh;
     }
     
-    #topnav #icons{
-        display: flex;
+    #topnav #icons {
+        flex-wrap: wrap;
         justify-content: center;
-    }
+      }
+
     #button-menu {
-        margin-left: -.5em;
+        margin-left: -.1em;
+        margin-top: .1em;
     }
+
 
 
     #back{
