@@ -32,22 +32,7 @@
             </li>
           </ul>
         </div>
-        <script>
-          $(document).ready(function() {
-            $(window).scroll(function() {
-              var scroll = $(window).scrollTop();
-              var mediaQuery = window.matchMedia('(min-width: 577px)');
-              // Check if the screen size is larger than 576px (not a mobile device)
-              if (mediaQuery.matches) {
-                if (scroll > 200) {
-                  $("#topnav").css("background", "transparent");
-                } else {
-                  $("#topnav").css("background", "rgb(29, 29, 29)");
-                }
-              }
-            });
-          });
-        </script>        
+        <script src="/static/js/scrollAnim.js"></script>
     </nav>
     <!--Animated navbar-->
     
@@ -69,22 +54,7 @@
        </div>
       <div id="overlay" onclick="w3_open()">
         <!-- sideBar Script -->
-        <script>
-          var toggleStatus = 1;
-          function toggleMenu() {
-            if (toggleStatus == 1 ) { 
-              document.getElementById("mySidebar").style.display = "block";
-              document.getElementById("overlay").style.display = "block";
-              toggleStatus = 0;
-            }
-                
-            else if(toggleStatus == 0) {
-              document.getElementById("mySidebar").style.display = "none";
-              document.getElementById("overlay").style.display = "none";
-              toggleStatus = 1;
-              }
-            }
-          </script>
+        <script src="/static/js/button-menu.js"></script>
         <!-- sideBar Script-->
       </div>
     </div>
