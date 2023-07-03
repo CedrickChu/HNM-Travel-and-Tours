@@ -78,7 +78,8 @@ section{
     font-size: 30px;
     font-weight: bold;
     margin-left: 3.1em;
-    padding: 6px 14px;
+    padding: 6px 17px;
+    margin-top: 10px;
     z-index: 9999999999999999;
     color: rgb(255, 69, 69);     
     }
@@ -248,23 +249,10 @@ a:link, a:visited {
 }
 
 
+
 #right{
-    width: 100%;
-    margin-left: 2em;
-    border-radius: 0%;
-    border: 2px solid white;
-    margin-top: -.6em;
-    max-width: 100%
-
+    margin-top: -.3em;
 }
-
-#right img{
-    width: 100%;
-    object-fit: cover;
-    max-width: 100%
-}
-
-
 
 
 .bg-five{
@@ -302,6 +290,7 @@ a:link, a:visited {
 }
 #services{
     text-align: center;
+
     font-family: 'roboto', sans-serif;
     text-transform: uppercase;
     color: #000000;
@@ -457,6 +446,24 @@ input[type=submit]{
     box-sizing: border-box;
     overflow: clip;
 }
+
+#sectionText{
+    font-family: sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    margin-top: -5em;
+}
+
+
+.section-title{
+    font-family: sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 60px;
+}
+
 #Attraction h3{
     font-family: Arial, tahoma, sans-serif;
     color: #000000;
@@ -474,52 +481,12 @@ input[type=submit]{
  
 }
 
-.section-title{
-    text-align: left;
-    font-family: sans-serif;
-    font-size: 4rem;
-    font-weight: bold;
-    position: relative;
-    margin-top: -40px;
-    bottom: 130px;
-}
-
-.mySlides{
-    display: none;
-}
+ .container{
+    padding-bottom: 20px;
+ }
+ 
 
 
-.slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-  }
-  
-  .slideshow-container img{
-    width: 100%;
-  }
-
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-  
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
   /* On hover, add a black background color with a little bit see-through */
   .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
@@ -534,28 +501,6 @@ input[type=submit]{
     bottom: 8px;
     width: 100%;
     text-align: center;
-  }
-  
-  /* Number text (1/3 etc) */
-  .numbertext {
-    color: #030303;
-    font-size: 30px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }
-  
-  /* The dots/bullets/indicators */
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #000000;
-    border-radius: 50%;
-    display: inline-block;
-    transition:  0.6s ease;
-    margin-top: 10px;
   }
   
   .active, .dot:hover {
@@ -644,26 +589,6 @@ input[type=submit]{
 
     }
 
-    #rightCard{
-        width: 590px;
-        height: 450px;
-        background-color: #26363F;
-        z-index: 1;
-        box-sizing: border-box;
-        border-radius: 0%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        margin-left: 1em;
-    }
-
-    #right{
-        width: 100%;
-        margin-top: .7em;
-        margin: auto;
-        border-radius: 0%;
-        margin-left: 20px;
-    }
 
     .bg-five{
         margin-top: 2em;
@@ -708,6 +633,7 @@ input[type=submit]{
         box-sizing: border-box;
         overflow: clip;
     }
+    
     #Attraction h3{
         font-family: Arial, tahoma, sans-serif;
         color: #000000;
