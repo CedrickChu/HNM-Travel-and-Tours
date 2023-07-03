@@ -256,7 +256,7 @@ a:link, a:visited {
 
 
 .bg-five{
-    margin-top: -7.3em;
+    margin-top: -7em;
     position: relative;
 }
 
@@ -562,8 +562,6 @@ input[type=submit]{
     height: 65px;
     margin-top: -6em;
     border-radius: 10px;
-
-   
     }
 
     #gallery{
