@@ -531,6 +531,7 @@ input[type=submit]{
     #topnav #icons {
         flex-wrap: wrap;
         justify-content: center;
+        margin-top: 4em;
       }
 
     #button-menu {

@@ -28,7 +28,7 @@ gallery = [
             'class=' : 'mySlides3',
             'heading': "3.) Culion Island Tour",
             'description': "qqqqqqqqqqqqqqqq",
-            'image': ["/static/images/culionIsland2.jpg", "/static/images/culionIsland.jpg", "/static/images/Culion-island.jpg"]
+            'image': ["/static/images/culionIsland2.jpg", "/static/images/culionIsland.jpg", "/static/images/Culion-Island.jpg"]
         }
     ]
 
