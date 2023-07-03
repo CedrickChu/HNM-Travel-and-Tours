@@ -2,7 +2,6 @@ from flask import Flask, render_template, current_app, jsonify
 import os
 import secrets
 import requests
-import logging
 from datetime import datetime, timedelta
 
 app = Flask(__name__)
@@ -32,7 +31,7 @@ gallery = [
             'image': ["/static/images/culionIsland2.jpg", "/static/images/culionIsland.jpg", "/static/images/Culion-island.jpg"]
         }
     ]
-logging.basicConfig(level=logging.DEBUG)
+
 
 def inject_nonce():
     return {'nonce': secrets.token_hex(16)}

@@ -1,101 +1,36 @@
+{% extends 'base.html' %}
+{% block body %}
 <section>
-    <div data-aos="fade-up" id="sectionBackgroundImg"></div>
-    <div id="Attraction" class="container">
+    <section>
         <div class="justify-content-md-center">
             <h3>Travel Attraction</h3>
             <h1 class="section-title">Top things to do:</h1>
         </div>
-        <script>
-            var n = 3;
-            var gallery_description = [
-                {
-                    heading: "1.) Underground River Tour",
-                    description: "Puerto Princesa City is the center of Palawan and best known for the internationally recognized Puerto Princesa Subterranean River (or Underground River), a UNESCO World Heritage Site and one of the New 7 Wonders of Nature. Not only that, the city is critically acclaimed for its environmental excellence.",
-                    images: [
-                        "/static/images/underground.jpg",
-                        "/static/images/underground.jpg",
-                        "/static/images/underground.jpg",
-                    ],
-                },
-                {
-                    heading: "1.) aaaaaaa",
-                    description: "ewqeadwqewqewq.",
-                    images: [
-                        "/static/images/underground.jpg",
-                        "/static/images/underground.jpg",
-                        "/static/images/underground.jpg",
-                    ],
-                },
-                {
-                    heading: "1.) bbbbbbbbbr",
-                    description: "qwqqqqqqtxytuyiuyiuyiuyiuy.",
-                    images: [
-                        "/static/images/underground.jpg",
-                        "/static/images/underground.jpg",
-                        "/static/images/underground.jpg",
-                    ],
-                },
-            ];
-            var container = document.createElement("div");
-            document.body.appendChild(container);
-            for (var i = 0; i < n; i++) {
-                var galleryContainer = document.createElement("div");
-                galleryContainer.id = "Attraction" + i;
-                galleryContainer.className = "container";
-                var innerContent = `
-                <h2 class="mb-0">${gallery_description[i].heading}</h2>
-                <p class="left-break">${gallery_description[i].description}</p>
-                <hr class="hr hr-blurry" />
-                <div data-aos="fade-up" class="slideshow-container">
-                ${generateSlides(gallery_description[i].images)}
-                </div>
-                `;
-                
-                galleryContainer.innerHTML = innerContent;
-                container.appendChild(galleryContainer);
-                
-            }
-            
-            let slideIndex = 1;
-                    showSlides(slideIndex);
-
-                    function plusSlides(n) {
-                    showSlides(slideIndex += n);
-                    }
-
-                    function currentSlide(n) {
-                    showSlides(slideIndex = n);
-                    }
-
-                    function showSlides(n) {
-                    let i;
-                    let slides = document.getElementsByClassName("mySlides");
-                    let dots = document.getElementsByClassName("dot");
-                    if (n > slides.length) {slideIndex = 1}    
-                    if (n < 1) {slideIndex = slides.length}
-                    for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";  
-                    }
-                    for (i = 0; i < dots.length; i++) {
-                        dots[i].className = dots[i].className.replace(" active", "");
-                    }
-                    slides[slideIndex-1].style.display = "block";  
-                    dots[slideIndex-1].className += " active";
-                    }
-
-            function generateSlides(images) {
-                var imgTags = '';
-                for (var i = 0; i < images.length; i++) {
-                    imgTags += `
-                    <div class="mySlides">
-                        <img src="${images[i]}" alt="Image ${i + 1}" width="300" height="200">
+        <div data-aos="fade-up" id="sectionBackgroundImg"></div>
+        {% for item in gallery %}
+        <div id="{{ item['id'] }}" class="container-fluid">
+            <h2 class="mb-0">{{ item['heading'] }}</h2>
+            <p class="left-break">{{ item['description'] }}</p>
+            <hr class="hr hr-blurry" />
+            <div id="carousel-{{ item['id'] }}" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    {% for image in item['image'] %}
+                    <div class="carousel-item {% if loop.index == 1 %}active{% endif %}">
+                        <img src="{{ image }}" class="d-block w-100" alt="Slide {{ loop.index }}">
                     </div>
-                    `;
-                }
-                return imgTags;
-            }
-
-
-        </script>
-    </div>
+                    {% endfor %}
+                </div>
+                <a class="carousel-control-prev" href="#carousel-{{ item['id'] }}" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel-{{ item['id'] }}" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
 </section>
+{% endblock %}

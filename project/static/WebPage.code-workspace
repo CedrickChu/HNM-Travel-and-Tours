@@ -7,5 +7,7 @@
 			"path": "../../../myFirstWebApp"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "WebPage"
+	}
 }
