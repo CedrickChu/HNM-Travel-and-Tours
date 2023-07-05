@@ -1,13 +1,17 @@
 from flask import Flask, render_template, current_app, jsonify
+from dotenv import load_dotenv
 import os
 import secrets
 import requests
 from datetime import datetime, timedelta
+load_dotenv()
+
 
 app = Flask(__name__)
+
 gallery = [
         {
-            'index': 1,
+            
             'id': 'Attraction1',
             'class=' : 'mySlides1',
             'heading': "1.) Underground River Tour",
@@ -15,7 +19,7 @@ gallery = [
             'image': ["/static/images/underground.jpg", "/static/images/underground2.jpg", "/static/images/underground3.jpg"]
         },
         {
-            'index': 2,
+           
             'id': 'Attraction2',
             'class=' : 'mySlides2',
             'heading': "2.) El Nido Island Hopping",
@@ -23,15 +27,22 @@ gallery = [
             'image': ["/static/images/elnido.jpg", "/static/images/elnido-beach.jpg", "/static/images/elnidoBeach.jpg"]
         },
         {
-            'index': 3,
+            
             'id': 'Attraction3',
             'class=' : 'mySlides3',
             'heading': "3.) Culion Island Tour",
             'description': "qqqqqqqqqqqqqqqq",
             'image': ["/static/images/culionIsland2.jpg", "/static/images/culionIsland.jpg", "/static/images/Culion-Island.jpg"]
+        },
+        {
+            
+            'id': 'Attraction4',
+            'class=' : 'mySlides4',
+            'heading': "4.) Culion Island Tour",
+            'description': "qqqqqqqqqqqqqqqq",
+            'image': ["/static/images/culionIsland2.jpg", "/static/images/culionIsland.jpg", "/static/images/Culion-Island.jpg"]
         }
     ]
-
 
 def inject_nonce():
     return {'nonce': secrets.token_hex(16)}
@@ -39,14 +50,15 @@ def inject_nonce():
 
 @app.route("/")
 def home():
-    access_token = ['FACEBOOK_ACCESS_TOKEN']
+    
+    access_token = os.getenv("FACEBOOK_ACCESS_TOKEN")
     latest_post_urls = fetch_facebook_posts(access_token)
     return render_template('index.html', latest_post_urls=latest_post_urls, gallery=gallery,nonce=inject_nonce())
 
 
 
 def fetch_facebook_posts(access_token, hashtag='#TicketsOnSale', days=30):
-    page_id = '108136152254757'
+    page_id = os.getenv("PAGE_ID")
     limit = 5
 
     # Calculate the date range for fetching posts

@@ -1,36 +1,85 @@
 {% extends 'base.html' %}
 {% block body %}
-<section>
-    <section>
-        <div class="justify-content-md-center">
-            <h3>Travel Attraction</h3>
-            <h1 class="section-title">Top things to do:</h1>
-        </div>
-        <div data-aos="fade-up" id="sectionBackgroundImg"></div>
-        {% for item in gallery %}
-        <div id="{{ item['id'] }}" class="container-fluid">
-            <h2 class="mb-0">{{ item['heading'] }}</h2>
-            <p class="left-break">{{ item['description'] }}</p>
-            <hr class="hr hr-blurry" />
-            <div id="carousel-{{ item['id'] }}" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    {% for image in item['image'] %}
-                    <div class="carousel-item {% if loop.index == 1 %}active{% endif %}">
-                        <img src="{{ image }}" class="d-block w-100" alt="Slide {{ loop.index }}">
-                    </div>
-                    {% endfor %}
-                </div>
-                <a class="carousel-control-prev" href="#carousel-{{ item['id'] }}" role="button" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carousel-{{ item['id'] }}" role="button" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </a>
-            </div>
-        </div>
-        {% endfor %}
-    </section>
-</section>
+
+<style>
+    .image-container {
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 1200px; /* Adjust the container width as needed */
+        height: auto; /* Adjust the container height as needed */
+        overflow: hidden;
+        margin-left: 30em;
+      
+      }
+      
+      .image-container img {
+        display: none;
+        width: 100%;
+        height: auto;
+      }
+      
+      .image-container img.active {
+        display: block;
+        
+      }
+</style>
+
+<div class="image-container">
+    <img src="/static/images/1.jpg" alt="Image 1">
+    <img src="/static/images/2.jpg" alt="Image 2">
+    <img src="/static/images/underground.jpg" alt="Image 3">
+    <img src="/static/images/underground2.jpg" alt="Image 4">
+    <img src="/static/images/underground3.jpg" alt="Image 5">
+  </div>
+  <script>
+    $(document).ready(function() {
+        var images = $('.image-container img');
+        var activeIndex = 0;
+      
+        // Set initial active image
+        images.eq(activeIndex).addClass('active');
+      
+        // Hover event for cycling images
+        $('.image-container').hover(
+          function() {
+            $(this).on('mousemove', function(e) {
+              var containerWidth = $(this).width();
+              var mouseX = e.pageX - $(this).offset().left;
+              var imageWidth = containerWidth / images.length;
+      
+              // Calculate index based on mouse position
+              var index = Math.floor(mouseX / imageWidth);
+      
+              // Update active image class
+              images.removeClass('active');
+              images.eq(index).addClass('active');
+      
+              // Update active index
+              activeIndex = index;
+            });
+          },
+          function() {
+            // Remove mousemove event on hover out
+            $(this).off('mousemove');
+          }
+        );
+      
+        // Keyboard event for cycling images
+        $(document).on('keydown', function(e) {
+          if (e.keyCode === 37) {
+            // Left arrow key
+            activeIndex = (activeIndex - 1 + images.length) % images.length;
+          } else if (e.keyCode === 39) {
+            // Right arrow key
+            activeIndex = (activeIndex + 1) % images.length;
+          }
+      
+          // Update active image class
+          images.removeClass('active');
+          images.eq(activeIndex).addClass('active');
+        });
+      });
+  </script>
+
 {% endblock %}

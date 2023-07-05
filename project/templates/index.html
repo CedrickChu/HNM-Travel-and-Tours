@@ -119,9 +119,9 @@
 
 <!-- Section: Top Travel Attraction-->
 <section>
-    <div data-aos="fade-up" id="sectionBackgroundImg"></div>
+    <div data-aos="zoom-in" id="sectionBackgroundImg"></div>
     {% for item in gallery%}
-    <div data-aos="fade-up" id="{{ item['id'] }}" class="container">
+    <div data-aos="zzoom-up" id="{{ item['id'] }}" class="container">
         {% if loop.index == 1 %}
                 <h3 id="sectionText">Travel Attraction</h3>
                 <h1 class="section-title">Top things to do:</h1>
@@ -155,7 +155,7 @@
     </div>
     <hr class="hr hr-blurry" />
       {%endfor%}
-      <div id="fb-root"></div>
+</section>
 
 <!-- Section: Top Travel Attraction-->
 
@@ -253,7 +253,7 @@
 
 <script>
   var chatbox = document.getElementById('fb-customer-chat');
-  chatbox.setAttribute("page_id", "108136152254757");
+  chatbox.setAttribute("page_id", {{ page_id }});
   chatbox.setAttribute("attribution", "biz_inbox");
 </script>
 
