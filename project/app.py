@@ -30,18 +30,34 @@ gallery = [
             
             'id': 'Attraction3',
             'class=' : 'mySlides3',
-            'heading': "3.) Culion Island Tour",
-            'description': "qqqqqqqqqqqqqqqq",
+            'heading': "3.) Culion Island Hopping",
+            'description': "Culion Island, situated in the northern part of Palawan, Philippines, is a captivating destination with a rich historical significance and natural charm. It is part of the Calamianes Group of Islands and is known for its tranquil atmosphere and stunning landscapes. Culion Island is also known for its vibrant marine life and coral reefs. Snorkelers and divers can explore the underwater world, discovering colorful coral formations and an array of tropical fish species. The island's waters are teeming with marine biodiversity, offering a memorable experience for those seeking to immerse themselves in its underwater wonders.",
             'image': ["/static/images/culionIsland2.jpg", "/static/images/culionIsland.jpg", "/static/images/Culion-Island.jpg"]
         },
         {
             
             'id': 'Attraction4',
             'class=' : 'mySlides4',
-            'heading': "4.) Culion Island Tour",
-            'description': "qqqqqqqqqqqqqqqq",
-            'image': ["/static/images/culionIsland2.jpg", "/static/images/culionIsland.jpg", "/static/images/Culion-Island.jpg"]
-        }
+            'heading': "4.) Honda Bay Island Escape",
+            'description': "Puerto Princesa’s Honda Bay is blessed with white sand beaches and small islands rich in marine life, and you can visit the top attractions all in just one day with Honda Bay island-hopping adventures.",
+            'image': ["/static/images/hondaBay.jpg", "/static/images/hondaBay2.jpg", "/static/images/hondaBay3.jpg"]
+        },
+         {
+            
+            'id': 'Attraction5',
+            'class=' : 'mySlides5',
+            'heading': "5.) Balabac Island Hopping",
+            'description': "Balabac Island is a captivating gem located in the southernmost part of Palawan, Philippines. It is part of the Calamianes Group of Islands and boasts a mesmerizing combination of natural wonders and pristine beauty.The island is renowned for its remarkable biodiversity and is home to numerous species of flora and fauna. With its lush forests and untouched wilderness, Balabac Island offers a unique opportunity for nature enthusiasts and adventurers to immerse themselves in its breathtaking landscapes.",
+            'image': ["/static/images/mansalanganbalabac.png", "/static/images/balabac3.png", "/static/images/balabac2.jpg"]
+        },
+         {
+            
+            'id': 'Attraction6',
+            'class=' : 'mySlides6',
+            'heading': "6.) coron island hopping",
+            'description': "Coron is part of the Calamianes Group of Islands and located on the northern tip of Palawan. It has seven lakes, famous of which is the nationally-acclaimed cleanest lake in the Philippines, the Kayangan Lake. It also has a number of islands with white beaches and clear blue waters perfect for snorkeling, deep sea fishing, and shipwreck diving.",
+            'image': ["/static/images/kayanganLake.jpg", "/static/images/kayanganLake2.jpg", "/static/images/coron2.jpg"]
+        },
     ]
 
 def inject_nonce():
@@ -58,7 +74,7 @@ def home():
 
 
 def fetch_facebook_posts(access_token, hashtag='#TicketsOnSale', days=30):
-    page_id = os.getenv("PAGE_ID")
+    page_id = "108136152254757"
     limit = 5
 
     # Calculate the date range for fetching posts

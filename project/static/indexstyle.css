@@ -478,9 +478,11 @@ input[type=submit]{
 
 .left-break{
     overflow-wrap: break-word;
-    text-align: left;
-    max-width: 50%;
-
+    text-align: justify;
+    max-width: 55%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
  
 }
 
