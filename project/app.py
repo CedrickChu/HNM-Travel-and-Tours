@@ -1,10 +1,10 @@
 from flask import Flask, render_template, current_app, jsonify
-from dotenv import load_dotenv
+
 import os
 import secrets
 import requests
 from datetime import datetime, timedelta
-load_dotenv()
+
 
 
 app = Flask(__name__)
@@ -51,7 +51,7 @@ def inject_nonce():
 @app.route("/")
 def home():
     
-    access_token = os.getenv("FACEBOOK_ACCESS_TOKEN")
+    access_token = ("FACEBOOK_ACCESS_TOKEN")
     latest_post_urls = fetch_facebook_posts(access_token)
     return render_template('index.html', latest_post_urls=latest_post_urls, gallery=gallery,nonce=inject_nonce())
 
