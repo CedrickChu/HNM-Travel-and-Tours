@@ -1,5 +1,4 @@
 from flask import Flask, render_template, current_app, jsonify
-
 import os
 import secrets
 import requests
@@ -54,9 +53,9 @@ gallery = [
             
             'id': 'Attraction6',
             'class=' : 'mySlides6',
-            'heading': "6.) coron island hopping",
+            'heading': "6.) Coron Island Hopping",
             'description': "Coron is part of the Calamianes Group of Islands and located on the northern tip of Palawan. It has seven lakes, famous of which is the nationally-acclaimed cleanest lake in the Philippines, the Kayangan Lake. It also has a number of islands with white beaches and clear blue waters perfect for snorkeling, deep sea fishing, and shipwreck diving.",
-            'image': ["/static/images/kayanganLake.jpg", "/static/images/kayanganLake2.jpg", "/static/images/coron2.jpg"]
+            'image': ["/static/images/KayanganLake.jpg", "/static/images/KayanganLake2.jpg", "/static/images/coron2.jpg"]
         },
     ]
 
