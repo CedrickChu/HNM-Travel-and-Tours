@@ -4,7 +4,7 @@
 {% block body %}
 
 <!--Section: Services-->
-<!--Section: Services-->
+
 <section id="sectionServices" class="align-center" >
     <div class="container">
       <div class="row">
@@ -46,7 +46,7 @@
 <!--Section: Services-->
 <!--gallery-->
 <main class="mt-5">
-    <div data-aos="fade-up" class="container">
+    <div data-aos="fade-up" class="container gallery">
         <section>
             <div class="row">
                 <div id="rowGallery" class="col-md-6 gx-5 mb-4">
@@ -116,9 +116,51 @@
     </div>
 </main>
 <!-- Gallery -->
+<section>
+    <div class="container-xxl py-5 destination">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title text-center fw-bold px-3">Popular Destination</h6>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-lg-7 col-md-6">
+                    <div class="row g-3">
+                        <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid" src="/static/images/puerto.jpg" alt="">
+                                <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Puerto Princesa</div>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid" src="/static/images/underground.jpg" alt="">
+                                <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Underground River</div>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid" src="/static/images/coron2.jpg" alt="">
+                                <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Coron</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
+                    <a class="position-relative d-block h-100 overflow-hidden" href="">
+                        <img class="img-fluid position-absolute w-100 h-100" src="/static/images/Elnido2.jpg" alt="" style="object-fit: cover;">
+                        <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">El Nido</div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- Section: Top Travel Attraction-->
-<section>
+<section class="alternate-background">
     <div data-aos="zoom-in" id="sectionBackgroundImg"></div>
     {% for item in gallery%}
     <div data-aos="zzoom-up" id="{{ item['id'] }}" class="container">
@@ -128,7 +170,7 @@
         {% endif%}
         <h2 class="mb-0">{{ item['heading'] }}</h2>
         <p class="left-break">{{ item['description']}}</p>
-        <hr class="hr hr-blurry" />
+        <hr class="hr hr-blurry" style="color: black;"/>
         <div id="carousel-{{ item['id'] }}" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carousel-{{ item['id'] }}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -153,7 +195,7 @@
             </button>
         </div>
     </div>
-    <hr class="hr hr-blurry" />
+    <hr class="hr hr-blurry" style="border: 2px solid black;" />
       {%endfor%}
     <ins class="adsbygoogle"
          style="display:block"
@@ -168,79 +210,11 @@
 
 <!-- Section: Top Travel Attraction-->
 
-<!--Section: Content-->
-<section class="text-center hide-on-small-device">
-    <div class="container">
-    <h4 data-aos="fade-up" class="mb-5"><strong>CEDRICK CHU!</strong></h4>
-    <div data-aos="fade-up" id="blueCard" class="row justify-content-md-center ">
-        <div class="col col-lg-2">
-            <div class="card custom-card">
-                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                    <img src="/static/images/balabac.jpg" class="img-fluid" />
-                    <a href="#!">
-                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                    </a>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">
-                        Some quick example text
-                    </p>
-                    <a href="#!" class="btn btn-primary">Button</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col col-lg-2">
-            <div class="card custom-card">
-                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                    <img src="/static/images/2.jpg" class="img-fluid" />
-                    <a href="#!">
-                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                    </a>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">
-                        Some quick example text
-                    </p>
-                    <a href="#!" class="btn btn-primary">Button</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col col-lg-2">
-            <div class="card custom-card">
-                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                    <img src="/static/images/cauayan-island-resort.jpg" class="img-fluid" />
-                    <a href="#!">
-                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                    </a>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">
-                        Some quick example text
-                    </p>
-                    <a href="#!" class="btn btn-primary">Button</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</section>
-<!--Section: Content-->
-<section class="text-center">
-    <h4 data-aos="fade-up" class="mb-5"><strong>Recent Packages</strong></h4>
-    <div data-aos="fade-up" class="embeddedPostsContainer">
-        <div id="embeddedPosts"></div>
-    </div>
-</section>
 
 
 <hr class="my-5" />
 
-<!--Section: Content-->
+
 <div data-aos="fade-up" id="packages" class="container-fluid hide-on-small-device">
     <p class="note">Sale Vacation </p>
     <p class="note">Packages</p>
@@ -251,18 +225,6 @@
         </div>
     </form>
 </div>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6699558686327687"
-     crossorigin="anonymous"></script>
-<!-- ad -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-6699558686327687"
-     data-ad-slot="5628905358"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 
 <!--Section: Content-->
 
@@ -297,3 +259,6 @@
   }(document, 'script', 'facebook-jssdk'));
 </script>
 {% endblock %}
+
+
+
