@@ -6,6 +6,23 @@ html, body {
     scroll-behavior: smooth;    
 
 }
+.text-center{
+    text-align: center;
+    font-family: sans-serif;
+    word-wrap: break-word;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 400;
+ 
+}
+
+.btn{
+    background-color: #3985C6 !important;
+}
+.btn:hover{
+    background-color: #39C67A !important;
+
+}
 
 ul{
     list-style-type: none;
@@ -30,11 +47,13 @@ section{
     position: relative;
     box-sizing: border-box;
     display: block;
+    padding-bottom: 20px;
 }
 .alternate-background{
     background-color: white;
     color:  #292b33;
     font-size: large;
+    padding-bottom: 20px;
 
 }
 .destination img {
@@ -42,6 +61,21 @@ section{
 }
 
 .destination a:hover img {
+    transform: scale(1.1);
+}
+
+.package-item {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    background-color: white;
+    color: #292b33;
+    padding-top: 20px;
+}
+
+.package-item img {
+    transition: .5s;
+}
+
+.package-item:hover img {
     transform: scale(1.1);
 }
 
@@ -93,7 +127,7 @@ section{
     padding: 6px 17px;
     margin-top: 10px;
     z-index: 9999999999999999;
-    color: rgb(255, 69, 69);     
+    color: rgb(255, 69, 69) !important;     
     }
 
 
@@ -498,7 +532,9 @@ input[type=submit]{
     padding-bottom: 60px;
     color: white;
 }
-
+.mb-0{
+    padding-top: 20px;
+}
 #Attraction h3{
     font-family: Arial, tahoma, sans-serif;
     color: #000000;

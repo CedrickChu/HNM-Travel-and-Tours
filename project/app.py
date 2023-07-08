@@ -18,7 +18,7 @@ gallery = [
             'image': ["/static/images/underground.jpg", "/static/images/underground2.jpg", "/static/images/underground3.jpg"]
         },
         {
-           
+         
             'id': 'Attraction2',
             'class=' : 'mySlides2',
             'heading': "2.) El Nido Island Hopping",
@@ -27,14 +27,14 @@ gallery = [
         },
         {
             
-            'id': 'Attraction3',
+       
             'class=' : 'mySlides3',
             'heading': "3.) Culion Island Hopping",
             'description': "Culion Island, situated in the northern part of Palawan, Philippines, is a captivating destination with a rich historical significance and natural charm. It is part of the Calamianes Group of Islands and is known for its tranquil atmosphere and stunning landscapes. Culion Island is also known for its vibrant marine life and coral reefs. Snorkelers and divers can explore the underwater world, discovering colorful coral formations and an array of tropical fish species. The island's waters are teeming with marine biodiversity, offering a memorable experience for those seeking to immerse themselves in its underwater wonders.",
             'image': ["/static/images/culionIsland2.jpg", "/static/images/culionIsland.jpg", "/static/images/Culion-Island.jpg"]
         },
         {
-            
+     
             'id': 'Attraction4',
             'class=' : 'mySlides4',
             'heading': "4.) Honda Bay Island Escape",
@@ -50,7 +50,7 @@ gallery = [
             'image': ["/static/images/mansalanganbalabac.png", "/static/images/balabac3.png", "/static/images/balabac2.jpg"]
         },
          {
-            
+         
             'id': 'Attraction6',
             'class=' : 'mySlides6',
             'heading': "6.) Coron Island Hopping",
@@ -118,6 +118,14 @@ def test():
 @app.route("/more")
 def learnmore():
   return render_template('learnMore.html')
+
+@app.route("/404")
+def error():
+    return render_template('404.html')
+
+@app.route("/test2")
+def test2():
+    return render_template('test2.html')
 
 
 if __name__ == "__main__":
