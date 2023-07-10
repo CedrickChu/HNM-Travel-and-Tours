@@ -6,6 +6,9 @@ html, body {
     scroll-behavior: smooth;    
 
 }
+.hr{
+    color:#3985C6;
+}
 .text-center{
     text-align: center;
     font-family: sans-serif;
@@ -557,9 +560,18 @@ input[type=submit]{
  .container{
     padding-bottom: 20px;
  }
- 
 
-
+ .clients-logo-wrapper img {
+    height: 80px;
+  }
+  .logo-lg {
+    width: 100%;
+    max-width: 180px; 
+    margin: 0 auto; 
+}
+.logo-sm img{
+    height: 120px;
+}
   /* On hover, add a black background color with a little bit see-through */
   .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);

@@ -119,6 +119,10 @@ def learnmore():
 def error():
     return render_template('404.html')
 
+@app.route("/test")
+def test():
+    return render_template('test.html')
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
