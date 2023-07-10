@@ -118,27 +118,27 @@
 <!-- Gallery -->
 <section class="alternate-background">
     <div class="container-xxl py-5 destination">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+        <div data-aos="fade-up" class="container">
+            <div class="text-center">
                 <h6 class="section-title text-center text-dark fw-bold px-3">Popular Destination</h6>
             </div>
 
             <div class="row g-3">
                 <div class="col-lg-7 col-md-6">
                     <div class="row g-3">
-                        <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
+                        <div data-aos="flip-right" class="col-lg-12 col-md-12">
                             <a class="position-relative d-block overflow-hidden" href="">
                                 <img class="img-fluid" src="/static/images/puerto.jpg" alt="">
                                 <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Puerto Princesa</div>
                             </a>
                         </div>
-                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
+                        <div data-aos="flip-right" class="col-lg-6 col-md-12">
                             <a class="position-relative d-block overflow-hidden" href="">
                                 <img class="img-fluid" src="/static/images/underground.jpg" alt="">
                                 <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Underground River</div>
                             </a>
                         </div>
-                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
+                        <div data-aos="flip-right" class="col-lg-6 col-md-12">
                             <a class="position-relative d-block overflow-hidden" href="">
                                 <img class="img-fluid" src="/static/images/coron2.jpg" alt="">
                                 <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Coron</div>
@@ -147,7 +147,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
+                <div data-aos="flip-left" class="col-lg-5 col-md-6" style="min-height: 350px;">
                     <a class="position-relative d-block h-100 overflow-hidden" href="">
                         <img class="img-fluid position-absolute w-100 h-100" src="/static/images/Elnido2.jpg" alt="" style="object-fit: cover;">
                         <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">El Nido</div>
@@ -160,7 +160,7 @@
 </section>
 <!-- Section: Packages Start-->
 <section>
-    <div class="container-xxl py-5">
+    <div data-aos="fade-up" class="container-xxl py-5">
         <div class="container">
             <div class="text-center">
                 <h1 class="mb-5">Awesome Packages</h1>
@@ -259,7 +259,7 @@
         {%else%}
         <section>
         {%endif%}
-    <div data-aos="zzoom-up" id="{{ item['id'] }}" class="container">
+    <div data-aos="zoom-up" id="{{ item['id'] }}" class="container">
         {% if loop.index == 1 %}
                 <h3 id="sectionText">Travel Attraction</h3>
                 <h1 class="section-title">Top things to do:</h1>
