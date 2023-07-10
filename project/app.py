@@ -111,10 +111,6 @@ def fetch_facebook_posts(access_token, hashtag='#TicketsOnSale', days=30):
 def carousel():
     return jsonify(gallery)
 
-@app.route("/test")
-def test():
-    return render_template('test.html', gallery=gallery)
-
 @app.route("/more")
 def learnmore():
   return render_template('learnMore.html')
@@ -122,10 +118,6 @@ def learnmore():
 @app.route("/404")
 def error():
     return render_template('404.html')
-
-@app.route("/test2")
-def test2():
-    return render_template('test2.html')
 
 
 if __name__ == "__main__":
