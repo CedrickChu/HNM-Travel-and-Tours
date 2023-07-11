@@ -6,9 +6,12 @@ html, body {
     scroll-behavior: smooth;    
 
 }
-.hr{
-    color:#3985C6;
+
+html, body {
+    -webkit-text-size-adjust: 100%;
+    -webkit--effective-scale: 1.1;
 }
+
 .text-center{
     text-align: center;
     font-family: sans-serif;
@@ -16,7 +19,14 @@ html, body {
     position: relative;
     text-transform: uppercase;
     font-weight: 400;
+  
  
+}
+
+.hr-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4em;
 }
 
 .btn{
@@ -39,21 +49,25 @@ h1{
     margin-inline-end: 0px;
 }
 .hr-blurry{
-    color: #ffffff;
+    color: #000000;
     border-top: 4px solid;
     z-index: 9999999999999999;
 }
-
+.hr-alternate{
+    color: #ffffff;
+    border-top: 4px solid;
+  
+}
 section{
     background-color: #292b33;
-    color: #E2E2E2;
+    color: #ffffff;
     position: relative;
     box-sizing: border-box;
     display: block;
     padding-bottom: 20px;
 }
 .alternate-background{
-    background-color:#E2E2E2;
+    background-color:#ffffff;
     color:  #292b33;
     font-size: large;
     padding-bottom: 20px;
@@ -69,7 +83,7 @@ section{
 
 .package-item {
     box-shadow: 0 0 45px rgba(0, 0, 0, .08);
-    background-color: #E2E2E2;
+    background-color: #ffffff;
     color: #292b33;
     padding-top: 20px;
 }
@@ -103,7 +117,7 @@ section{
   }
   
 .scrolled{
-    background-color: #E2E2E2;
+    background-color: #ffffff;
     transition: background-color 0.5s ease;
  }
 
@@ -166,7 +180,7 @@ a:link, a:visited {
 .service-item {
     box-shadow: 0 0 45px rgba(0, 0, 0, .08);
     transition: .5s;
-    background-color: #E2E2E2;
+    background-color: #ffffff;
 }
 
 .service-item:hover {
@@ -279,7 +293,7 @@ a:link, a:visited {
 
 .cardServices{
     margin-top: -4em;
-    background-color: #E2E2E2 !important;
+    background-color: #ffffff !important;
     border: 1px;
     border-radius: 30px;
     width: 250px;
@@ -456,37 +470,8 @@ input[type=submit]{
     
 }
 
-#leftCard{
-    width: 390px;
-    height: 450px;
-    background-color: #e9e9e9 !important;
-    z-index: 1;
-    margin-top: 8em;
-    margin-left: 34em;
-    box-sizing: border-box;
-    border-radius: 0%;
-    
-}
-.fas fa-map-marked{
-    background-color: #26363F;
-}
-#rightCard{
-    width: 590px;
-    height: 450px;
-    background-color: #26363F;
-    z-index: 1;
-    box-sizing: border-box;
-    margin-top: -30em;
-    margin-left: 58em;
-    border-radius: 0%;
-    background-image: url("/static/images/contactUs.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    
-}
-#sectionImages{
-    background-color: #e4e5e6;
+.footer-images{
+    background-color: #E2E2E2;
 }
 .fb-post {
     margin-bottom: 20px;
@@ -564,6 +549,7 @@ input[type=submit]{
  .clients-logo-wrapper img {
     height: 80px;
   }
+
   .logo-lg {
     width: 100%;
     max-width: 180px; 
@@ -572,26 +558,6 @@ input[type=submit]{
 .logo-sm img{
     height: 120px;
 }
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-  
-  /* Caption text */
-  .text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-  }
-  
-  .active, .dot:hover {
-    background-color: #ffffff;
-  }
-  
  
   /* On smaller screens, decrease text size */
   @media only screen and (max-width: 300px) {
