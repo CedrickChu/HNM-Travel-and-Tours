@@ -335,6 +335,7 @@ a:link, a:visited {
     border-radius: 30px;
     width: 250px;
     height: 250px;
+    margin-right: 20px;
 }
 
 .cardServices img{
@@ -599,6 +600,10 @@ input[type=submit]{
 .carousel-item img {
     height: 50vh;
 }
+.center-align{
+    display: flex;
+    justify-content: center;
+}
 
 @media (min-width: 992px) {
     .carousel-item img {
@@ -659,6 +664,14 @@ input[type=submit]{
         height: 30vh;
     }
 
+    .text-center h6{
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-top: 5em;
+    }
+    .center-align-sm{
+        justify-content: center;
+    }
 }
 
   @media (max-width: 576px) {
@@ -674,6 +687,16 @@ input[type=submit]{
         width: 100%;
         height: 50vh;
     }
+    .text-center h6{
+        font-size: 3rem;
+        font-weight: bold;
+        margin-top: 3em;
+    }
+    .row .g-3{
+        margin-top: -5em;
+        margin-left: 10px;
+    }
+
     #sectionText{
         margin-top: -2em;
         padding-bottom: 10px;
