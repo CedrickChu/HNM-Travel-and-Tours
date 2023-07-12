@@ -273,28 +273,24 @@ a:link, a:visited {
 }
 
 #p {
-    text-align: left;
+
     font-family: 'roboto', sans-serif;
     text-transform: uppercase;
-    color: #000000;
-    margin-top: 3em;
-    padding-left: 15px;
-    font-size: 23px;
+    color: #ffffff;
+    font-size: 10px;
     font-weight: bold;
 }
 
 #h1{
-    font-size: 45px;
-    text-align: left;
+    font-size: 30px;
     font-family: 'roboto', sans-serif;
     text-transform: uppercase;
-    color: #000000;
-    margin-top: 2em;
-    padding-left: 15px;
+    color: #ffffff;
     font-weight: bolder;
         
     
 }
+
 
 #title{
     font-family: lucida;
@@ -599,35 +595,75 @@ input[type=submit]{
 .logo-sm img{
     height: 120px;
 }
- 
-  /* On smaller screens, decrease text size */
-  @media only screen and (max-width: 300px) {
-    .prev, .next,.text {
-        font-size: 11px
+
+.carousel-item img {
+    height: 50vh;
+}
+
+@media (min-width: 992px) {
+    .carousel-item img {
+        height: 80vh;
+    }
+    .hide-on-large-device{
+        display: none;
+    }
+    #p {
+        text-align: left;
+        font-family: 'roboto', sans-serif;
+        text-transform: uppercase;
+        color: #000000;
+        margin-top: 3em;
+        padding-left: 15px;
+        font-size: 23px;
+        font-weight: bold;
+    }
+    
+    #h1{
+        font-size: 45px;
+        text-align: left;
+        font-family: 'roboto', sans-serif;
+        text-transform: uppercase;
+        color: #000000;
+        margin-top: 2em;
+        padding-left: 15px;
+        font-weight: bolder;
+            
+        
     }
 }
 
+
 @media (max-width: 576px)
 {
-.clients-logo-wrapper img {
-   height: 52px;
- }
+    .clients-logo-wrapper img {
+    height: 52px;
+    }
 
- .logo-lg {
-   width: 100%;
-   max-width: 120px; 
-   margin: 0 auto; 
-}
-.logo-sm img{
-   height: 80px;
-}
+    .logo-lg {
+    width: 100%;
+    max-width: 120px; 
+    margin: 0 auto; 
+    }
+    .logo-sm img{
+    height: 80px;
 
-  }
+    }
+    .text-on-device{
+        font-size: .5rem;
+
+    }
+    #packages{
+        display: none;
+    }
+    .carousel-inner img{
+        height: 30vh;
+    }
+
+}
 
   @media (max-width: 576px) {
     #topnav {
       justify-content: space-around;
-      
     }
     
   }
