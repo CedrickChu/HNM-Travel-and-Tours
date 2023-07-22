@@ -42,7 +42,7 @@
         </div>
       </div>
     </div>
-  </section>
+</section>
 <!--Section: Services-->
 <!--gallery-->
 <main class="mt-5">
@@ -255,14 +255,14 @@
     <div data-aos="zoom-in" id="sectionBackgroundImg"></div>
     {% for item in gallery%}
         {% if loop.index % 2 == 0%}
-        <section class ="alternate-background">
-        {%else%}
-        <section>
+            <section class ="alternate-background">
+            {%else%}
+            <section>
         {%endif%}
         <div data-aos="zoom-up" id="{{ item['id'] }}" class="container">
             {% if loop.index == 1 %}
-                    <h3 id="sectionText">Travel Attraction</h3>
-                    <h1 class="section-title">Top things to do:</h1>
+                <h3 id="sectionText">Travel Attraction</h3>
+                <h1 class="section-title">Top things to do:</h1>
             {% endif%}
             <h2 class="mb-0">{{ item['heading'] }}</h2>
             <p class="left-break u-text u-text-2">{{ item['description']}}</p>
@@ -289,8 +289,20 @@
                 </button>
             </div>
         </div>
-        {%endfor%}
-    </div>
+    </section>
+    {%endfor%}
+</section>
+
+<section>
+<ins class="adsbygoogle"
+   style="display:block"
+   data-ad-client="ca-pub-6699558686327687"
+   data-ad-slot="2250302661"
+   data-ad-format="auto"
+   data-full-width-responsive="true"></ins>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 </section>
 
 <!-- Section: Top Travel Attraction Start-->
@@ -317,30 +329,6 @@
 <!-- Chat Plugin code -->
 <div id="fb-customer-chat" class="fb-customerchat">
 </div>
-
-<script>
-  var chatbox = document.getElementById('fb-customer-chat');
-  chatbox.setAttribute("page_id", "108136152254757");
-  chatbox.setAttribute("attribution", "biz_inbox");
-</script>
-
-<!-- SDK code -->
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      xfbml            : true,
-      version          : 'v17.0'
-    });
-  };
-
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-</script>
 {% endblock %}
 
 
