@@ -222,6 +222,7 @@ a:link, a:visited {
     box-shadow: 0 0 45px rgba(0, 0, 0, .08);
     transition: .5s;
     background-color: #ffffff;
+    color: #000000;
 }
 
 .service-item:hover {
@@ -452,7 +453,6 @@ a:link, a:visited {
 .row .card{
     width: 400px;
     height: auto;
-   
     background-color: #39C6C1 !important;
 }
 .row .card img {
