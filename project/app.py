@@ -1,9 +1,9 @@
 from flask import Flask, render_template, current_app, jsonify
 import os
+#from dotenv import load_dotenv
 import secrets
 import requests
 from datetime import datetime, timedelta
-
 
 
 app = Flask(__name__)
@@ -65,15 +65,15 @@ def inject_nonce():
 
 @app.route("/")
 def home():
-    
+    #os.getenv WIP, "dot_env" doesnt seems to work.
     access_token = ("FACEBOOK_ACCESS_TOKEN")
     latest_post_urls = fetch_facebook_posts(access_token)
-    return render_template('index.html', latest_post_urls=latest_post_urls, gallery=gallery,nonce=inject_nonce())
+    return render_template('index.html', latest_post_urls=latest_post_urls,gallery=gallery,nonce=inject_nonce())
 
 
 
 def fetch_facebook_posts(access_token, hashtag='#TicketsOnSale', days=30):
-    page_id = "108136152254757"
+    page_id = ("FACEBOOK_ID")
     limit = 5
 
     # Calculate the date range for fetching posts
