@@ -1,6 +1,6 @@
 from flask import Flask, render_template, current_app, jsonify
 import os
-#from dotenv import load_dotenv
+#from dotenv import load_dotenv could not be resolved somehow
 import secrets
 import requests
 from datetime import datetime, timedelta
