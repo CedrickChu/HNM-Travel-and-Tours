@@ -65,6 +65,7 @@ def inject_nonce():
 
 @app.route("/")
 def home():
+    #load_dotenv()
     #os.getenv WIP, "dot_env" doesnt seems to work.
     access_token = ("FACEBOOK_ACCESS_TOKEN")
     latest_post_urls = fetch_facebook_posts(access_token)
